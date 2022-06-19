@@ -587,3 +587,48 @@ address {
 .page-footer{
     justify-content: flex-start;
     }
+
+.active-page:active::after,
+.active-page:hover::after {
+    content: " ";
+    display: block;
+    border-top: 4px solid #2196F3;
+    border-radius: 2px;
+    top: 28px;
+    position: relative;
+}
+/* 
+.overlay {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    transform: translateY(-100%);
+}
+
+.box:hover .overlay {
+    transform: translateX(0);
+} */
+
+.box {
+    position: relative;
+    width: 370px;
+    height: 294px;
+    overflow: hidden;
+}
+
+.box:hover .overlay{
+    transform: translateY(0);
+
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    transition: transform 250ms ease;
+}
