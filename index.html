@@ -62,7 +62,7 @@
           <h1 class="main-title-page">
             EFEKTYWNE ROZWIĄZANIA DLA WASZEGO BIZNESU
           </h1>
-          <button type="button">Zamów usługe</button>
+          <button type="button" data-modal-open>Zamów usługe</button>
         </div>
       </section>
 
@@ -154,22 +154,25 @@
                 width="370"
                 height="294"
               />
+              <div class="occupation-layout">APLIKACJE KOMPUTEROWE</div>
             </li>
-            <li class="occupation-2">
+            <li class="occupation-1">
               <img
                 src="./images/14.jpg"
                 alt="photo-2"
                 width="370"
                 height="294"
               />
+              <div class="occupation-layout">APLIKACJE MOBILNE</div>
             </li>
-            <li class="occupation-3">
+            <li class="occupation-1">
               <img
                 src="./images/15.jpg"
                 alt="photo-3"
                 width="370"
                 height="294"
               />
+              <div class="occupation-layout">ROZWIĄZANIA GRAFICZNE</div>
             </li>
           </ul>
         </div>
@@ -517,5 +520,14 @@
       </div>
     </div>
     </footer>
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class= "modal-window" data-modal-close>X
+      </div>
+    </div> 
+
+    <script src="./js/modal.js"></script>
+
   </body>
 </html>
