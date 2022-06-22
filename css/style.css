@@ -35,12 +35,14 @@ a {
 
 .menu a,
 .contacts a {
+    height: 18px;
     font-weight: 500;
     font-size: 14px;
 }
 
 .menu a:hover,
 .contacts a:hover {
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     color: var(--hover);
 }
 
@@ -104,6 +106,7 @@ a {
     box-shadow: 0px 2px rgba(0, 0, 0, 0.12),
                 0px 1px rgba(0, 0, 0, 0.08),
                 0px 3px rgba(0, 0, 0, 0.1);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .lorem-ipsum h6 {
@@ -328,6 +331,7 @@ h3 {
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16),
                 0px 4px 4px rgba(0, 0, 0, 0.06),
                 0px 1px 1px rgba(0, 0, 0, 0.12);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .pictures {
@@ -395,7 +399,8 @@ address {
 }
 
 .social-link-item {
-    display: block;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    display: flex;
     height: 44px;
     width: 44px;
     border-radius: 50%;
@@ -416,6 +421,7 @@ address {
 
 .social-link-item:hover {
     background-color: var(--hover);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icons {
@@ -511,6 +517,7 @@ address {
     max-width: 94px;
     display: flex;
     fill: #AFB1B8;
+
 }
 
 .our-customers-icons {
@@ -522,10 +529,12 @@ address {
 .our-customers-items:hover {
     background-color: var(--pure-white);
     border: 1px solid var(--hover);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our-customers-items:hover svg{
     fill: var(--hover);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-item-menu {
@@ -561,10 +570,12 @@ address {
 
 .join-us-footer:hover {
     background-color: var(--hover);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .join-us-footer:hover svg{
    fill: #fff;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-2 a {
@@ -616,6 +627,7 @@ address {
     0px, 1px, 1px rgba(0, 0, 0, 0.12), 
     0px, 4px, 4px rgba(0, 0, 0, 0.06),
     1px, 4px, 4px rgba(0, 0, 0, 0.16);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .overlay {
@@ -667,38 +679,41 @@ address {
     height: 100%;
     left: 0;
     top: 0;
-    background-color: rgba(0, 0, 0, 0.2)
+    background-color: rgba(0, 0, 0, 0.2);
 } 
 
 .modal {
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);    
+    left: 50%;  
+    transform: translate(-50%,-50%);     
     background-color: #fff;
     width: 528px;
     min-height: 581px;
-    animation: animation 4000ms linear 200ms 1;
+    animation: animation 1000ms linear 200ms 1; 
 }
 
 @keyframes animation {
     0% {
-        transform: rotateX(-60deg);
+        transform: translate(-50%, -50%) scale(1);
+        background-color:#d9d9e2;
     }
 
     50% {
-        transform: rotateX(60deg);
+        transform: translate(-50%, -50%) scale(1.2);
+        background-color:#d9d9e2;
     }
 
     100% {
-        transform: rotateX(-60deg);
+        transform: translate(-50%, -50%) scale(1);
+        background-color: #fff;
     }
-}
+} 
 
-.long-animation:hover,
-.long-animation:focus {
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition: 250ms linear;
+.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
 }
 
 .modal-window {
@@ -715,9 +730,3 @@ address {
     align-items: center;
     cursor: pointer;
 }
-
-.is-hidden {
-    opacity: 0;
-    visibility: hidden;
-    pointer-events: none;
-}    
