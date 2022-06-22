@@ -99,7 +99,7 @@ a {
     border-radius: 4px;
     font-family: inherit;
     border: none;
-    transition: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: color, background-color, box-shadow;
 }
 
@@ -572,7 +572,7 @@ address {
     height: 44px;
     width: 44px;
     border-radius: 50%;
-    transition: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     transition-property: background-color, fill;
 }
 
