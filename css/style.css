@@ -38,11 +38,12 @@ a {
     height: 18px;
     font-weight: 500;
     font-size: 14px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: color;
 }
 
 .menu a:hover,
 .contacts a:hover {
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
     color: var(--hover);
 }
 
@@ -98,15 +99,16 @@ a {
     border-radius: 4px;
     font-family: inherit;
     border: none;
+    transition: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: color, background-color, box-shadow;
 }
 
 .second-page-button button:hover {
-    background: var(--hover);
+    background-color: var(--hover);
     color: var(--pure-white);
     box-shadow: 0px 2px rgba(0, 0, 0, 0.12),
                 0px 1px rgba(0, 0, 0, 0.08),
                 0px 3px rgba(0, 0, 0, 0.1);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .lorem-ipsum h6 {
@@ -331,11 +333,12 @@ h3 {
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16),
                 0px 4px 4px rgba(0, 0, 0, 0.06),
                 0px 1px 1px rgba(0, 0, 0, 0.12);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .pictures {
     cursor: pointer;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: box-shadow;
 }
 
 .picture figcaption {
@@ -400,15 +403,20 @@ address {
 
 .social-link-item {
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: fill, background-color;
     display: flex;
     height: 44px;
     width: 44px;
     border-radius: 50%;
 }
 
+.social-icons {
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: fill;
+}
+
 .social-list-item:not(:last-child) {
     margin-right: 10px;
-
 }
 
 .social-icons {
@@ -421,7 +429,6 @@ address {
 
 .social-link-item:hover {
     background-color: var(--hover);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icons {
@@ -438,9 +445,13 @@ address {
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: color, fill;
 }
 
 .menu-icons-telephone {
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: color, fill;
     display: block;
     fill: #757575;
     max-width: 16px;
@@ -450,6 +461,8 @@ address {
 }
 
 .menu-icons-poczta {
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: color, fill;
     display: block;
     fill:#757575;
     max-width: 16px;
@@ -509,6 +522,8 @@ address {
     margin-top: 50px;
     border: 1px solid #AFB1B8; border-radius:4px;
     cursor: pointer;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: border;
 }
 
 .our-customers-icons  {
@@ -517,8 +532,12 @@ address {
     max-width: 94px;
     display: flex;
     fill: #AFB1B8;
-
 }
+
+.customers-icons {
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: fill;
+} 
 
 .our-customers-icons {
     display: flex;
@@ -529,12 +548,10 @@ address {
 .our-customers-items:hover {
     background-color: var(--pure-white);
     border: 1px solid var(--hover);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .our-customers-items:hover svg{
     fill: var(--hover);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-list-item-menu {
@@ -555,6 +572,8 @@ address {
     height: 44px;
     width: 44px;
     border-radius: 50%;
+    transition: 2500ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: background-color, fill;
 }
 
 .join-us {
@@ -570,12 +589,10 @@ address {
 
 .join-us-footer:hover {
     background-color: var(--hover);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .join-us-footer:hover svg{
    fill: #fff;
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .contact-2 a {
@@ -602,6 +619,18 @@ address {
     justify-content: flex-start;
     }
 
+.active::after{
+    content: " ";
+    display: block;
+    border-top: 4px solid #2196F3;
+    border-radius: 2px;
+    top: 28px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    margin-top: 15px;   
+}
+
 .active-page:active::after,
 .active-page:hover::after {
     content: " ";
@@ -609,6 +638,13 @@ address {
     border-top: 4px solid #2196F3;
     border-radius: 2px;
     top: 28px;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    margin-top: 15px;
+}
+
+.menu-link {
     position: relative;
 }
 
@@ -618,6 +654,8 @@ address {
     overflow: hidden;
     width: 370px;
     height: 404px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: box-shadow;
 }
 
 .pictures:hover .overlay,
@@ -627,7 +665,6 @@ address {
     0px, 1px, 1px rgba(0, 0, 0, 0.12), 
     0px, 4px, 4px rgba(0, 0, 0, 0.06),
     1px, 4px, 4px rgba(0, 0, 0, 0.16);
-    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .overlay {
@@ -637,11 +674,12 @@ address {
     width: 370px;
     height: 295px;
     transform: translateY(100%);
-    transition: transform 250ms ease;
     background-color: rgba(33, 150, 243, 0.9);
     color: #FFFFFF; 
     padding-top: 49px; 
     padding-left: 24px;
+    transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition-property: transform;
 }
 
 .overlay-description {
@@ -690,7 +728,10 @@ address {
     background-color: #fff;
     width: 528px;
     min-height: 581px;
-    animation: animation 1000ms linear 200ms 1; 
+}
+
+.backdrop:not(.is-hidden) .modal {
+    animation: animation 2000ms linear 200ms 1;
 }
 
 @keyframes animation {
@@ -710,15 +751,11 @@ address {
     }
 } 
 
-/* .is-hidden */
-
 .is-hidden {
     opacity: 0;
     visibility: hidden;
     pointer-events: none; 
 }
-
-/* .modal-window */
 
 .modal-window {
     position: absolute;
