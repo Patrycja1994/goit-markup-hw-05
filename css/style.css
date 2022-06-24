@@ -782,8 +782,12 @@ address {
      width: 100%;
      height: 100%;
      background-color: rgba(0, 0, 0, 0.2);
-     transition: 1500ms cubic-bezier(0.4, 0, 0.2, 3);
+     transition: 500ms cubic-bezier(0.4, 0, 0.2, 1);
      transition-property: transform, visibility, opacity;
+ }
+
+ .backdrop:not(.is-hidden) .modal {
+    transition: 500ms cubic-bezier(0.4, 0, 0.2, 1);
  }
 
  .modal {
@@ -794,7 +798,7 @@ address {
      width: 528px;
      min-height: 581px;
      background-color: #fff;
-     transition: 1500ms cubic-bezier(0.4, 0, 0.2, 3);
+     transition: 500ms cubic-bezier(0.4, 0, 0.2, 1);
      transition-property: transform;
  }
 
