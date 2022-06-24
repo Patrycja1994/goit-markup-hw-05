@@ -43,21 +43,18 @@ a {
     width: 100%;
     left: 0;
     margin-top: 16px;
-    opacity: 0;
 }
 
 .menu-link:active::after,
 .menu-link:hover::after {
     content: " ";
     display: block;
-    border-top: 4px solid #2196F3;
     border-radius: 2px;
     top: 28px;
     position: absolute;
     width: 100%;
     left: 0;
     margin-top: 16px;
-    opacity: 1;
 }
 
 .menu-link {
@@ -720,6 +717,8 @@ address {
     left: 0;
     top: 0;
     background-color: rgba(0, 0, 0, 0.2);
+    transition: var(--transition);
+    transition-property: transform, visibility, opacity;
 } 
 
 .modal {
@@ -730,6 +729,7 @@ address {
     background-color: #fff;
     width: 528px;
     min-height: 581px;
+    transition-property: transform;
 }  
 
 .backdrop:not(.is-hidden) .modal {
@@ -772,4 +772,5 @@ address {
     align-items: center;
     align-items: center;
     cursor: pointer;
-}
+} 
+
